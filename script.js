@@ -1,7 +1,7 @@
 async function fetchData() {
     addSpinner();
     try {
-        let response = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json');
+        let response = await fetch('https://makeup-api.herokuapp.com/api/v1/products.json');
         if (response.status === 200) {
             let data = await response.json();
             console.log(data);
@@ -30,7 +30,7 @@ async function searchData() {
     }
     showSpinner();
     try {
-        let response = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand='+inputVal);
+        let response = await fetch('https://makeup-api.herokuapp.com/api/v1/products.json?brand='+inputVal);
         if (response.status === 200) {
             let data = await response.json();
             console.log(data);
